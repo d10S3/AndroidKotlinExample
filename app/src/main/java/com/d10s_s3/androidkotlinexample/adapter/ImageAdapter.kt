@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.d10s_s3.androidkotlinexample.adapter.contract.ImageAdapterContract
 import com.d10s_s3.androidkotlinexample.data.ImageItem
 
-class ImageAdapter(override var onClickFunc: ((Int) -> Unit)?) : ImageAdapterContract.View, RecyclerView.Adapter<ImageViewHolder>(), ImageAdapterContract.Model {
+class ImageAdapter : ImageAdapterContract.View, RecyclerView.Adapter<ImageViewHolder>(), ImageAdapterContract.Model {
 
     private lateinit var imageList: ArrayList<ImageItem>
+
+    override var onClickFunc: ((Int) -> Unit)? = null
 
     override fun onBindViewHolder(holder: ImageViewHolder, position: Int) {
         imageList[position].let {
@@ -32,5 +34,4 @@ class ImageAdapter(override var onClickFunc: ((Int) -> Unit)?) : ImageAdapterCon
     override fun clearItem() {
         imageList.clear()
     }
-
 }
