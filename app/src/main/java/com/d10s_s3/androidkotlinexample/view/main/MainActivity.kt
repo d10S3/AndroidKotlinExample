@@ -2,9 +2,9 @@ package com.d10s_s3.androidkotlinexample.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
 import com.arasthel.spannedgridlayoutmanager.SpanSize
 import com.arasthel.spannedgridlayoutmanager.SpannedGridLayoutManager
 import com.d10s_s3.androidkotlinexample.R
@@ -40,23 +40,13 @@ class MainActivity : AppCompatActivity(), MainContract.View {
 
         spannedGridLayoutManager.spanSizeLookup = SpannedGridLayoutManager.SpanSizeLookup { position ->
             when {
-                position % 12 == 0 ->
+                position % 18 == 0 ->
                     SpanSize(2, 2)
-                position % 12 == 7 ->
+                position % 18 == 10 ->
                     SpanSize(2, 2)
                 else ->
                     SpanSize(1, 1)
             }
-            /*if (position % imageAdapter.itemCount == 0 ||
-                position % imageAdapter.itemCount == 10 || // r
-                position % imageAdapter.itemCount == 18 || // l
-                position % imageAdapter.itemCount == 28 || // r
-                position % imageAdapter.itemCount == 36 || // l
-                position % imageAdapter.itemCount == 46) { // r
-                SpanSize(2, 2)
-            }else{
-                SpanSize(1, 1)
-            }*/
         }
 
         recyclerView.layoutManager = spannedGridLayoutManager
