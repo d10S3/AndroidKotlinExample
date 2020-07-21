@@ -1,5 +1,5 @@
 # AndroidKotlinExample
 
-# MVP Pattern Example
+MVP Pattern Example
 
-# RecyclerView with Instagram View
+RecyclerView with Instagram View
