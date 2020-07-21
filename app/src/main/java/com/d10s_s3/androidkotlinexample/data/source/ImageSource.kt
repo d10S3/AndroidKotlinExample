@@ -10,5 +10,4 @@ interface ImageSource {
     }
 
     fun getImages(context: Context, size: Int, loadImageCallback: LoadImageCallback?)
-    fun addImages(context: Context, size: Int, list: ArrayList<ImageItem>, loadImageCallback: LoadImageCallback?)
 }

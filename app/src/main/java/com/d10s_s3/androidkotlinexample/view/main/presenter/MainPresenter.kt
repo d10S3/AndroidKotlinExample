@@ -19,7 +19,7 @@ class MainPresenter (
     }
 
     override fun loadItems(context: Context, isClear: Boolean) {
-        imageData.getImages(context, 47, object : ImageSource.LoadImageCallback {
+        imageData.getImages(context, 53, object : ImageSource.LoadImageCallback {
             override fun onLoadImages(list: ArrayList<ImageItem>) {
                 if (isClear) {
                     adapterModel.clearItem()

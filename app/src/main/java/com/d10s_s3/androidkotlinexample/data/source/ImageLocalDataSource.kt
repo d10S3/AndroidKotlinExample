@@ -20,19 +20,4 @@ object ImageLocalDataSource : ImageSource{
         }
         loadImageCallback?.onLoadImages(list)
     }
-
-    override fun addImages(
-        context: Context,
-        size: Int,
-        list: ArrayList<ImageItem>,
-        loadImageCallback: ImageSource.LoadImageCallback?
-    ) {
-        val index = 0;
-        if (list.size <= 50) {
-            for (index in 0..size) {
-
-            }
-        }
-    }
-
 }
